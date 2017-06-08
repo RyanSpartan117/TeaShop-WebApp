@@ -1,52 +1,54 @@
 class TeaStoresController < Sinatra::Base
+	require 'sinatra'
+	require 'sinatra/activerecord'
 
-	set :root, File.join(file.dirname(__FILE__), '..')
+	set :root, File.join(File.dirname(__FILE__), '..')
 	set :views, Proc.new { File.join(root, "views")}
 
 		# index
-	get "/teaStores" do
+	get "/teaStores/index" do
 
-		@teaStores = TeaStores.all
+		@teaStores = TeaStore.all
 
-	  erb(:"teaStores/index")
+	 	erb(:"tea_stores/index")
 	end
 
-	# new
-	get "/courses/new" do
-	  @courses = Course.all
-	  erb(:"courses/new")
-	end
+	# # new
+	# get "/courses/new" do
+	#   @courses = Course.all
+	#   erb(:"courses/new")
+	# end
 
-	# create
-	post "/courses" do
-	  @course = Course.create!(params[:course])
-	  redirect("/courses/#{@course.id}")
-	end
+	# # create
+	# post "/courses" do
+	#   @course = Course.create!(params[:course])
+	#   redirect("/courses/#{@course.id}")
+	# end
 
 	#show
-	get "/courses/:id" do
-	  @course   = Course.find(params[:id])
-	  erb(:"courses/show")
+	get "/teaStores/:id" do
+	  @teaStore = TeaStore.find(params[:id])
+	  erb(:"tea_stores/show")
 	end
 
-	# edit
-	get "/courses/:id/edit" do
-	  @course = Course.find(params[:id])
-	  erb(:"courses/edit")
-	end
+	# # edit
+	# get "/courses/:id/edit" do
+	#   @course = Course.find(params[:id])
+	#   erb(:"courses/edit")
+	# end
 
-	# update
-	post "/courses/:id/update" do
-	  @course = Course.find(params[:id])
-	  @course.update(params[:course])
-	  redirect("/courses/#{@course.id}")
-	end
+	# # update
+	# post "/courses/:id/update" do
+	#   @course = Course.find(params[:id])
+	#   @course.update(params[:course])
+	#   redirect("/courses/#{@course.id}")
+	# end
 
-	# destroy
-	post "/courses/:id/delete" do
-	  @course = Course.find(params[:id])
-	  @course.destroy
-	  redirect("/courses")
-	end
+	# # destroy
+	# post "/courses/:id/delete" do
+	#   @course = Course.find(params[:id])
+	#   @course.destroy
+	#   redirect("/courses")
+	# end
 
 end
