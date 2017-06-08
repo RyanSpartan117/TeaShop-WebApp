@@ -16,8 +16,8 @@
 
 -- CREATE TABLE teaStores (
 --    id SERIAL PRIMARY KEY,
---    name varchar(255),
---    location varchar(255),
+--    name varchar(255) NOT NULL,
+--    location varchar(255) NOT NULL,
 --    rating decimal(1, 1)
 
 -- )
