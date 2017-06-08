@@ -1,3 +1,9 @@
-# class TeasController < Sinatra::Base
+class TeasController < Sinatra::Base
 
-# end
+
+	set :root, File.join(file.dirname(__FILE__), '..')
+	set :views, Proc.new { File.join(root, "views")}
+
+	
+
+end
