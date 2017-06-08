@@ -1,4 +1,5 @@
-# class TeaStores < ActiveRecord::Base
+class TeaStores < ActiveRecord::Base
 
-# end
+	has_many :teas
+end
 

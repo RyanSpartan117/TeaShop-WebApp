@@ -1,3 +1,5 @@
-# class Tea < ActiveRecord::Base	
+class Tea < ActiveRecord::Base	
 
-# end
+	has_one :tea_stores
+
+end

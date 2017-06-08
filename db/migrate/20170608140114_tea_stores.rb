@@ -5,6 +5,5 @@ class TeaStores < ActiveRecord::Migration[5.1]
       t.string :location, null: false
       t.decimal :rating, nul:false
   	end
- 
   end
 end
