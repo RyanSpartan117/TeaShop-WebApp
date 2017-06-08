@@ -1,3 +1,3 @@
-class TeaStoresController < Sinatra::Base
+# class TeaStoresController < Sinatra::Base
 
-end
+# end

@@ -1,3 +1,3 @@
-class Tea < ActiveRecord::Base	
+# class Tea < ActiveRecord::Base	
 
-end
+# end

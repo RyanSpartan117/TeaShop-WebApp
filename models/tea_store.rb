@@ -1,4 +1,4 @@
-class TeaStores < ActiveRecord::Base
+# class TeaStores < ActiveRecord::Base
 
-end
+# end
 

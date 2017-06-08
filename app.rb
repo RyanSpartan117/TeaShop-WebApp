@@ -1,4 +1,5 @@
 # require 'sinatra/reloader' if development?
+require 'sinatra'
 
 # Load models
 Dir[File.dirname(__FILE__) + '/models/*.rb'].each { |file| require file }
