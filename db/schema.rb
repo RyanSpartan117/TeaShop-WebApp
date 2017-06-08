@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170608142547) do
 
   create_table "teas", force: :cascade do |t|
     t.string "tea_name", null: false
-    t.string "type", null: false
+    t.string "type_of_tea", null: false
     t.decimal "price", precision: 5, scale: 2, null: false
     t.integer "tea_store_id"
   end
