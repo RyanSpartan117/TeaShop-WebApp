@@ -4,6 +4,7 @@ class TeaStoresController < Sinatra::Base
 
 	set :root, File.join(File.dirname(__FILE__), '..')
 	set :views, Proc.new { File.join(root, "views")}
+	set :public_folder, "public"
 
 	# index
 	get "/teaStores/index" do
@@ -41,9 +42,11 @@ class TeaStoresController < Sinatra::Base
 	put '/teaStores/:id' do
 		id = params[:id]
 		@name = params[:name]
-		location = params[:location]
-		teastore = TeaStore.find(id)
-		teastore.update(name: @name, location: location)
+		address1 = params[:address1]
+		city = params[:city]
+		postcode = params[:location]
+		teaStore = TeaStore.find(id)
+	  	teaStore = TeaStore.create!(name: @name, address1: address1, city: city, postcode: postcode)
 		redirect "/teaStores/index"
 		
 	end

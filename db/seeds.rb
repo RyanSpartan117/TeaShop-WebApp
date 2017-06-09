@@ -30,7 +30,7 @@ TeaStore.delete_all
 
 teaStore1 = TeaStore.create!(name: 'TTwo', rating: 4.3, address1: 'Unit G17, Kingston Bentall Centre Wood St', city: 'London', postcode: 'KT1 1TP')
 teaStore2 = TeaStore.create!(name: 'TeaPigs', rating: 3.9, address1: 'The Richmond Tea Rooms Richmond Street,', city: 'Manchester', postcode: 'M1 3HZ')
-teaStore3 = TeaStore.create!(name: 'TeadUp', rating: 4.5, address1: '50 George Street', city: 'Richmond', postcode: 'TW9 1HJ ')
+teaStore3 = TeaStore.create!(name: 'TeadUp', rating: 4.5, address1: '50 George Street', city: 'Richmond', postcode: 'TW9 1HJ')
 teaStore4 = TeaStore.create!(name: 'TooTeaForMe', rating: 2.5, address1: '35 Abbey Rd', city: 'Nottingham', postcode: 'NG2 5NG')
 
 
