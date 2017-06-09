@@ -47,3 +47,8 @@ Tea.create!(tea_name: 'Sencha', type_of_tea: 'Green Tea', price: 3.99, tea_store
 Tea.create!(tea_name: 'Matcha', type_of_tea: 'Green Tea', price: 4.99, tea_store_id: teaStore3.id)
 Tea.create!(tea_name: 'Tencha', type_of_tea: 'Green Tea', price: 2.99, tea_store_id: teaStore4.id)
 Tea.create!(tea_name: 'ginger', type_of_tea: 'Herbal', price: 5.50, tea_store_id: teaStore1.id)
+
+
+puts teaStore1.tea
+
+

@@ -3,6 +3,7 @@
 <div>
 	<p> <%= @teaStore.location %></p>
 
+
 </div>
 <a href="<%= @teaStore.id %>/edit"> edit </a>
 <form action = '<%= @teaStore.id %>' method="post">
@@ -11,3 +12,14 @@
 	<input type="submit" value="Delete">
 
 </form>
+
+
+<h2>Here are all the Teas!</h2>
+
+<% @teas.each do |teaStore| %>
+<div>
+	<h2><a href="<%= teaStore.id %>"><%= teaStore.name %></a></h2>
+	<p> <%= teaStore.location %></p>
+
+</div>
+<% end %>

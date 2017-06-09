@@ -5,7 +5,7 @@ class TeaStoresController < Sinatra::Base
 	set :root, File.join(File.dirname(__FILE__), '..')
 	set :views, Proc.new { File.join(root, "views")}
 
-		# index
+	# index
 	get "/teaStores/index" do
 
 		@teaStores = TeaStore.all
@@ -34,6 +34,7 @@ class TeaStoresController < Sinatra::Base
 	  	erb(:"tea_stores/show")
 	end
 
+	#update
 	put '/teaStores/:id' do
 		id = params[:id]
 		@name = params[:name]
@@ -52,15 +53,8 @@ class TeaStoresController < Sinatra::Base
 		erb(:"tea_stores/edit")
 	end
 
-	# # update
-	# post "/courses/:id/update" do
-	#   @course = Course.find(params[:id])
-	#   @course.update(params[:course])
-	#   redirect("/courses/#{@course.id}")
-	# end
-
 	# destroy
-	delete "/teaStores/:id/delete" do
+	delete "/teaStores/:id" do
 	  @teaStore = TeaStore.find(params[:id])
 	  @teaStore.destroy
 	  redirect("/teaStores/index")
