@@ -1,0 +1,16 @@
+<h1> <%=@tea.tea_name %> </h1>
+
+<div>
+	<p> <%= @tea.type_of_tea %></p>
+
+	<p>This tea costs £<%= @tea.price %> </p>
+
+
+</div>
+<a href="<%= @tea.id %>/edit"> edit </a>
+<form action = '<%= @tea.id %>' method="post">
+	<input type="hidden" name="_method" value="DELETE">
+
+	<input type="submit" value="Delete">
+
+</form>
