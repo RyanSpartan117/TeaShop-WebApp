@@ -16,11 +16,11 @@ class TeasController < Sinatra::Base
 	# create
 	post "/teaStores/:id" do
 		id = params[:id]
-		teaStore = TeaStore.find[id]
+		teaStore = TeaStore.find(id)
 		@tea_name = params[:tea_name]
 		typeof = params[:type_of_tea]
 		price = params[:price]
-	  	@tea = Tea.create!(tea_name: @tea_name, type_of_tea: typeof, price: price, tea_store_id: teaStore)
+	  	@tea = Tea.create!(tea_name: @tea_name, type_of_tea: typeof, price: price, tea_store_id: id)
 
 	  	redirect("/teaStores/#{id}")
 	end
