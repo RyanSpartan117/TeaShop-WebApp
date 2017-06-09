@@ -5,9 +5,19 @@
 		<input type="text" name="name" value = "<%= @teaStore.name %>">
 	</div>
 	<div>
-		<label for="location">Location</label>
-		<textarea name="location"><%= @teaStore.location %></textarea>
+		<label for="address1">Address 1</label>
+		<textarea name="address1"><%= @teaStore.address1 %></textarea>
 
+	</div>
+
+	<div>
+		<label for="city">City</label>
+		<input type="text" name="city" value = "<%= @teaStore.city %>">
+	</div>
+
+	<div>
+		<label for="postcode">Postcode</label>
+		<input type="text" name="postcode" value = "<%= @teaStore.postcode %>">
 	</div>
 
 	<div>
