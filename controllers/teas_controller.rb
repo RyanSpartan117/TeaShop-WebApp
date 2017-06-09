@@ -5,27 +5,24 @@ class TeasController < Sinatra::Base
 	set :root, File.join(File.dirname(__FILE__), '..')
 	set :views, Proc.new { File.join(root, "views")}
 
-
-	# index
-	# get "/teaStores/tea/index" do
-
-	# 	@teaStores = TeaStore.all
-
-	#  	erb(:"teas/index")
-	# end
-
 	# new
-	get "/teaStore/tea/new" do
-	  # @teaStores = TeaStore.all
-	  erb(:"teas/new")
+	get "/teaStores/:id/tea/new" do
+		@id = params[:id]
+		@tea = Tea.all
+
+		erb(:"teas/new")
 	end
 
 	# create
-	post "/teaStores/tea/index" do
-		@name = params[:name]
-		location = params[:location]
-	  	@teaStore = TeaStore.create!(name: @name, location: location)
-	  	redirect("/teaStores/#{@teaStore.id}")
+	post "/teaStores/:id" do
+		id = params[:id]
+		teaStore = TeaStore.find[id]
+		@tea_name = params[:tea_name]
+		typeof = params[:type_of_tea]
+		price = params[:price]
+	  	@tea = Tea.create!(tea_name: @tea_name, type_of_tea: typeof, price: price, tea_store_id: teaStore)
+
+	  	redirect("/teaStores/#{id}")
 	end
 
 	#show
@@ -57,10 +54,12 @@ class TeasController < Sinatra::Base
 	end
 
 	# destroy
-	delete "/teaStores/:id" do
-	  @teaStore = TeaStore.find(params[:id])
-	  @teaStore.destroy
-	  redirect("/teaStores/index")
+	delete "/teaStores/tea/:id" do
+		id = params[:id].to_i
+		@tea = Tea.find(id)
+		teaStore = @tea.tea_store_id
+		@tea.destroy
+		redirect("/teaStores/#{teaStore}")
 	end
 
 end

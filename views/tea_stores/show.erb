@@ -6,6 +6,7 @@
 
 </div>
 <a href="<%= @teaStore.id %>/edit"> edit </a>
+<a href="/teaStores/<%=@teaStore.id %>/tea/new">Add a Tea</a>
 <form action = '<%= @teaStore.id %>' method="post">
 	<input type="hidden" name="_method" value="DELETE">
 
