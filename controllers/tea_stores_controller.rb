@@ -41,7 +41,6 @@ class TeaStoresController < Sinatra::Base
 		@name = params[:name]
 		location = params[:location]
 		teastore = TeaStore.find(id)
-		"params: #{id}, #{@name}, #{location}, #{teastore}"
 		teastore.update(name: @name, location: location)
 		redirect "/teaStores/index"
 		

@@ -5,6 +5,7 @@ class TeasController < Sinatra::Base
 	set :root, File.join(File.dirname(__FILE__), '..')
 	set :views, Proc.new { File.join(root, "views")}
 
+
 	# index
 	# get "/teaStores/tea/index" do
 
@@ -14,13 +15,13 @@ class TeasController < Sinatra::Base
 	# end
 
 	# new
-	get "/teaStores/tea/new" do
+	get "/teaStore/tea/new" do
 	  # @teaStores = TeaStore.all
 	  erb(:"teas/new")
 	end
 
 	# create
-	post "/teaStores/index" do
+	post "/teaStore/tea/index" do
 		@name = params[:name]
 		location = params[:location]
 	  	@teaStore = TeaStore.create!(name: @name, location: location)
@@ -28,33 +29,34 @@ class TeasController < Sinatra::Base
 	end
 
 	#show
-	get "/teaStores/:id" do
+	get "/teaStore/tea/:id" do
 		id = params[:id].to_i
-	  	@teaStore = TeaStore.find(id)
-	  	erb(:"tea_stores/show")
+	  	@tea = Tea.find(id)
+	  	erb(:"teas/show")
 	end
 
 	#update
-	put '/teaStores/:id' do
-		id = params[:id]
-		@name = params[:name]
-		location = params[:location]
-		teastore = TeaStore.find(id)
-		"params: #{id}, #{@name}, #{location}, #{teastore}"
-		teastore.update(name: @name, location: location)
-		redirect "/teaStores/index"
+	put '/teaStore/tea/:id' do
+		id = params[:id].to_i
+		tea_name = params[:tea_name]
+		typeof = params[:type_of_tea]
+		price = params[:price]
+		tea = Tea.find(id)
+		# "params: #{id}, #{@name}, #{location}, #{teastore}"
+		tea.update(tea_name: tea_name, type_of_tea: typeof, price: price)
+		redirect "/teaStore/tea/#{id}"
 		
 	end
 
 	# edit
-	get "/teaStores/:id/edit" do
+	get "/teaStore/tea/:id/edit" do
 		id = params[:id].to_i
-		@teaStore = TeaStore.find(id)
-		erb(:"tea_stores/edit")
+	  	@tea = Tea.find(id)
+		erb(:"teas/edit")
 	end
 
 	# destroy
-	delete "/teaStores/:id" do
+	delete "/teaStore/:id" do
 	  @teaStore = TeaStore.find(params[:id])
 	  @teaStore.destroy
 	  redirect("/teaStores/index")
