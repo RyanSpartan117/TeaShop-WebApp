@@ -1,9 +1,13 @@
-<h1> @store.name </h1>
+<h1> <%=@teaStore.name %> </h1>
 
-<% @teaStores.each do |teaStore| %>
 <div>
-	<h2><a href="/<%= teaStore.id %>"><%= teaStore.name %></a></h2>
-	<p> <%= teaStore.location %></p>
+	<p> <%= @teaStore.location %></p>
 
 </div>
-<% end %>
+<a href="<%= @teaStore.id %>/edit"> edit </a>
+<form action = '<%= @teaStore.id %>' method="post">
+	<input type="hidden" name="_method" value="DELETE">
+
+	<input type="submit" value="Delete">
+
+</form>

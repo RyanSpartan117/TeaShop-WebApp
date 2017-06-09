@@ -1,0 +1,18 @@
+<form action = '/teaStores/<%=@teaStore.id%>' method = "POST">
+	<input type="hidden" name="_method" value="PUT">
+	<div>
+		<label for="name">Name</label>
+		<input type="text" name="name" value = "<%= @teaStore.name %>">
+	</div>
+	<div>
+		<label for="location">Location</label>
+		<textarea name="location"><%= @teaStore.location %></textarea>
+
+	</div>
+
+	<div>
+		<input type="submit" value="Submit">
+
+	</div>
+
+</form>
