@@ -6,17 +6,17 @@ class TeasController < Sinatra::Base
 	set :views, Proc.new { File.join(root, "views")}
 
 	# index
-	get "/teaStores/index" do
+	# get "/teaStores/tea/index" do
 
-		@teaStores = TeaStore.all
+	# 	@teaStores = TeaStore.all
 
-	 	erb(:"tea_stores/index")
-	end
+	#  	erb(:"teas/index")
+	# end
 
 	# new
-	get "/teaStores/new" do
-	  @teaStores = TeaStore.all
-	  erb(:"tea_stores/new")
+	get "/teaStores/tea/new" do
+	  # @teaStores = TeaStore.all
+	  erb(:"teas/new")
 	end
 
 	# create

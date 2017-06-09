@@ -31,6 +31,7 @@ class TeaStoresController < Sinatra::Base
 	get "/teaStores/:id" do
 		id = params[:id].to_i
 	  	@teaStore = TeaStore.find(id)
+	  	@teas = @teaStore.teas
 	  	erb(:"tea_stores/show")
 	end
 
