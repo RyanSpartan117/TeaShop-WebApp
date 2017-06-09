@@ -21,7 +21,7 @@ class TeasController < Sinatra::Base
 	end
 
 	# create
-	post "/teaStore/tea/index" do
+	post "/teaStores/tea/index" do
 		@name = params[:name]
 		location = params[:location]
 	  	@teaStore = TeaStore.create!(name: @name, location: location)
@@ -29,34 +29,35 @@ class TeasController < Sinatra::Base
 	end
 
 	#show
-	get "/teaStore/tea/:id" do
+	get "/teaStores/tea/:id" do
 		id = params[:id].to_i
 	  	@tea = Tea.find(id)
 	  	erb(:"teas/show")
 	end
 
 	#update
-	put '/teaStore/tea/:id' do
+	put '/teaStores/tea/:id' do
 		id = params[:id].to_i
 		tea_name = params[:tea_name]
 		typeof = params[:type_of_tea]
 		price = params[:price]
+
 		tea = Tea.find(id)
 		# "params: #{id}, #{@name}, #{location}, #{teastore}"
 		tea.update(tea_name: tea_name, type_of_tea: typeof, price: price)
-		redirect "/teaStore/tea/#{id}"
+		redirect "/teaStores/tea/#{id}"
 		
 	end
 
 	# edit
-	get "/teaStore/tea/:id/edit" do
+	get "/teaStores/tea/:id/edit" do
 		id = params[:id].to_i
 	  	@tea = Tea.find(id)
 		erb(:"teas/edit")
 	end
 
 	# destroy
-	delete "/teaStore/:id" do
+	delete "/teaStores/:id" do
 	  @teaStore = TeaStore.find(params[:id])
 	  @teaStore.destroy
 	  redirect("/teaStores/index")
