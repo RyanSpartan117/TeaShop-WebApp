@@ -22,8 +22,10 @@ class TeaStoresController < Sinatra::Base
 	# create
 	post "/teaStores/index" do
 		@name = params[:name]
-		location = params[:location]
-	  	@teaStore = TeaStore.create!(name: @name, location: location)
+		address1 = params[:address1]
+		city = params[:city]
+		postcode = params[:location]
+	  	@teaStore = TeaStore.create!(name: @name, address1: address1, city: city, postcode: postcode)
 	  	redirect("/teaStores/#{@teaStore.id}")
 	end
 

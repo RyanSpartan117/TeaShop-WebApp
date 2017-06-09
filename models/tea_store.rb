@@ -1,8 +1,10 @@
-class TeaStore < ActiveRecord::Base
+class TeaStore < ActiveRecord::Base 
+	extend Geocoder::Model::ActiveRecord
 	has_many :teas
 
 
-	geocoded_by :address
+	geocoded_by :postcode
 	after_validation :geocode
+
 end
 

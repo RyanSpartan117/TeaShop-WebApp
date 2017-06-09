@@ -1,10 +1,12 @@
 <h1> <%=@teaStore.name %> </h1>
 
 <div>
-	<p> <%= @teaStore.location %></p>
-
+	<p> <%= @teaStore.address1 %></p>
+	<p> <%= @teaStore.city %></p>
+	<p> <%= @teaStore.postcode %></p>
 
 </div>
+
 <a href="<%= @teaStore.id %>/edit"> edit </a>
 <a href="/teaStores/<%=@teaStore.id %>/tea/new">Add a Tea</a>
 <form action = '<%= @teaStore.id %>' method="post">

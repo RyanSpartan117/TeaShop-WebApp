@@ -4,7 +4,9 @@
 <% @teaStores.each do |teaStore| %>
 <div>
 	<h2><a href="<%= teaStore.id %>"><%= teaStore.name %></a></h2>
-	<p> <%= teaStore.location %></p>
+	<p> <%= teaStore.address1 %></p>
+	<p> <%= teaStore.city %></p>
+	<p> <%= teaStore.postcode %></p>
 
 </div>
 <% end %>
