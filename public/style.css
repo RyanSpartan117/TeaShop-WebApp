@@ -1,0 +1,37 @@
+html {
+	font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+.tea-store-name {
+
+}
+
+#form-mid {
+	margin-left:200px;
+}
+
+.shop-container {
+	text-align:center;
+}
+
+#map {
+	height: 400px;
+	width: 600px;
+}
+
+.tea-shop-img {
+	height:400px;
+	width:35%;
+	border: black 2px solid;
+	background-color: red;
+	display:inline-block;
+	margin-right: 50px;
+}
+
+#map-location {
+	height:400px;
+	width:35%;
+	border: black 2px solid;
+	display:inline-block;
+	margin-left:50px;
+}
