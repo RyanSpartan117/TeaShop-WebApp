@@ -7,6 +7,11 @@ class TeaStoresController < Sinatra::Base
 	set :public_folder, "public"
 
 	# index
+	def index
+  		@q = TeaStore.ransack(params[:q])
+  		@people = @q.result(distinct: true)
+	end
+	
 	get "/teaStores/index" do
 
 		@teaStores = TeaStore.all
@@ -18,6 +23,10 @@ class TeaStoresController < Sinatra::Base
 	get "/teaStores/new" do
 	  @teaStores = TeaStore.all
 	  erb(:"tea_stores/new")
+	end
+
+	get "/teaStores/search" do
+
 	end
 
 	# create
