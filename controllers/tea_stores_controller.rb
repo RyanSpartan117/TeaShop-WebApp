@@ -1,17 +1,15 @@
 class TeaStoresController < Sinatra::Base
 	require 'sinatra'
 	require 'sinatra/activerecord'
-	gem 'ransack'
 
 	set :root, File.join(File.dirname(__FILE__), '..')
 	set :views, Proc.new { File.join(root, "views")}
 	set :public_folder, "public"
 
 	# index
-	
-	get "/teaStores/index" do
-
-		@teaStores = TeaStore.all
+	get "/teaStores" do
+		@search = TeaStore.search(params[:q]) if params[:q]
+		@teaStores = @search || TeaStore.all
 
 	 	erb(:"tea_stores/index")
 	end
@@ -22,19 +20,8 @@ class TeaStoresController < Sinatra::Base
 		erb(:"tea_stores/new")
 	end
 
-	get "/teaStores/search" do
-
-		# @q = TeaStore.ransack(params[:q])
-		# @teaStores = @q.result(distinct: true)
-		def index 
-			@search = TeaStore.search(params[:q])
-			@teaStores = TeaStore.all
-		end
-		
-	end
-
 	# create
-	post "/teaStores/index" do
+	post "/teaStores" do
 		@name = params[:name]
 		address1 = params[:address1]
 		city = params[:city]
