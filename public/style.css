@@ -44,3 +44,18 @@ html {
 	display:inline-block;
 	vertical-align: top;
 }
+
+.caption-align-left {
+	width:50%;
+	height: 100%;
+	display:inline-block;
+
+}
+.caption-align-right {
+	width: 40%;
+	height: 100%;
+	display: inline-block;
+	margin:auto;
+	margin-right: 0px;
+	vertical-align: 60%;
+}

@@ -11,7 +11,6 @@
 </div>
 <div class = "center">
 	<a href="<%= @teaStore.id %>/edit"> edit <%= @teaStore.name %> </a>
-
 </div>
 <div class = "shop-container"> 
 		
@@ -19,12 +18,11 @@
 		
 		 <script async defer
   		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaCe7nWX7TbSfZBsSBZv3A8tx9zH4clB0&callback=initMap">
-  </script>
+  		</script>
   
 	</div>
-
 		<div id="store-info">
-			<p>Tea Store Address:</p>
+			<p>Address:</p>
 			<p> <%= @teaStore.address1 %>, <%= @teaStore.city %></p>
 			<p> <%= @teaStore.postcode %></p>
 			<p id = "latitude"> <%= @teaStore.latitude %> </p>
@@ -35,23 +33,29 @@
  
 </div>
 
-<a href="/teaStores/<%=@teaStore.id %>/tea/new">Add a Tea</a>
-
-
+<div class = "new-tea"></div>
 <% @teas.each do |tea| %>
+<div class="col-sm-6 col-md-4">
+	<div class="thumbnail">
+		<img src=" http://i4.mirror.co.uk/incoming/article6201545.ece/ALTERNATES/s615/Cup-of-tea.jpg" alt="...">
+		<div class="caption">
+			<div class= "caption-align-left">
+				<a href="/teaStores/tea/<%= tea.id %>"> 
+					<h3> <%= tea.tea_name %></h3>
+				</a>
+				<p> <%= tea.type_of_tea %> </p>
+				<p> £<%= tea.price %></p>
+			</div>
+			<div class= "caption-align-right">	
+				<form action = '<%= tea.id %>' method="post">
+					<input type="hidden" name="_method" value="DELETE">
 
+					<input type="submit" value="Delete">
 
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
+				</form>
+			</div>
 
-      <img src=" http://i4.mirror.co.uk/incoming/article6201545.ece/ALTERNATES/s615/Cup-of-tea.jpg" alt="...">
-      <div class="caption">
-        <a href="/teaStores/tea/<%= tea.id %>"> 
-        	<h3> <%= tea.tea_name %></h3>
-        </a>
-        <p> <%= tea.type_of_tea %> </p>
-        <p> £<%= tea.price %></p>
-      </div>
-    </div>
-  </div>
-      <% end %>
+		</div>
+	</div>
+</div>
+<% end %>
