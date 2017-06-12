@@ -3,22 +3,22 @@
 <h1 class="tea-store-name"> <%=@teaStore.name %> </h1>
 
 <div class = "shop-container"> 
-  <div class = "tea-shop-img" ></div>    
-  <div id="map-location"></div>
+	<div class="tea-shop-wrap">
+  		<div class = "tea-shop-img" ></div>
+
+		<div id="store-info">
+			<p>Tea Store Address:</p>
+			<p> <%= @teaStore.address1 %>, <%= @teaStore.city %></p>
+			<p> <%= @teaStore.postcode %></p>
+			<p id = "latitude"> <%= @teaStore.latitude %> </p>
+			<p id = "longitude"> <%= @teaStore.longitude %> </p>
+		</div>
+	</div>
+	<div id="map-location"></div>
 
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaCe7nWX7TbSfZBsSBZv3A8tx9zH4clB0&callback=initMap">
   </script>
-</div>
-
-
-<div>
-	<p>Tea Store Address:</p>
-	<p> <%= @teaStore.address1 %>, <%= @teaStore.city %></p>
-	<p> <%= @teaStore.postcode %></p>
-	<p id = "latitude"> <% @teaStore.latitude %> </p>
-	<p id = "longitude"> <% @teaStore.longitude %> </p>
-
 </div>
 
 <a href="<%= @teaStore.id %>/edit"> edit </a>

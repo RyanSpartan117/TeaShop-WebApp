@@ -3,6 +3,11 @@ html {
 }
 
 .tea-store-name {
+	margin-left: 30%;
+}
+
+.store-info {
+
 
 }
 
@@ -19,13 +24,25 @@ html {
 	width: 600px;
 }
 
-.tea-shop-img {
-	height:400px;
+.tea-shop-wrap {
+	height: 600px;
 	width:35%;
+	display: inline-block;
+}
+
+.tea-shop-img {
+
+	height:400px;
+	width:100%;
 	border: black 2px solid;
-	background-color: red;
+	background-color: blue;
 	display:inline-block;
 	margin-right: 50px;
+
+
+}
+#latitude, #longitude {
+	display:none;
 }
 
 #map-location {
@@ -34,4 +51,5 @@ html {
 	border: black 2px solid;
 	display:inline-block;
 	margin-left:50px;
+	vertical-align: top;
 }
