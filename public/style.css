@@ -3,13 +3,17 @@ html {
 }
 
 .tea-store-name {
-	margin-left: 30%;
+	text-align: center;
+	font-size: 60px;
+	margin: auto;
 }
 
-.store-info {
-
-
+.center {
+	width:100%;
+	text-align: center;
+	margin:auto;
 }
+
 
 #form-mid {
 	margin-left:200px;
@@ -19,37 +23,14 @@ html {
 	text-align:center;
 }
 
-#map {
-	height: 400px;
-	width: 600px;
-}
-
-.tea-shop-wrap {
-	height: 600px;
-	width:35%;
-	display: inline-block;
-}
-
-.tea-shop-img {
-
-	height:400px;
-	width:100%;
-	border: black 2px solid;
-	background-color: blue;
-	display:inline-block;
-	margin-right: 50px;
-
-
-}
 #latitude, #longitude {
 	display:none;
 }
 
 #map-location {
 	height:400px;
-	width:35%;
+	width:50%;
 	border: black 2px solid;
 	display:inline-block;
-	margin-left:50px;
 	vertical-align: top;
 }
