@@ -6,6 +6,11 @@ html {
 	text-align: center;
 	font-size: 60px;
 	margin: auto;
+	display:inline-block;
+}
+
+.delete-button {
+	display:inline-block;
 }
 
 .center {
