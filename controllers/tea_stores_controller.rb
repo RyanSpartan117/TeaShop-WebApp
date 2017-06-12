@@ -21,11 +21,14 @@ class TeaStoresController < Sinatra::Base
 
 	# new
 	get "/teaStores/new" do
-	  @teaStores = TeaStore.all
-	  erb(:"tea_stores/new")
+		@teaStores = TeaStore.all
+		erb(:"tea_stores/new")
 	end
 
 	get "/teaStores/search" do
+		"hey"
+
+		erb(:"tea_stores/search")
 
 	end
 
