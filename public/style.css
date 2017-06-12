@@ -13,6 +13,11 @@ html {
 	display:inline-block;
 }
 
+
+.delete-button:hover {
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 .center {
 	width:100%;
 	text-align: center;
