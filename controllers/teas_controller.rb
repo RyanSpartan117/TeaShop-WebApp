@@ -41,7 +41,6 @@ class TeasController < Sinatra::Base
 		price = params[:price]
 
 		tea = Tea.find(id)
-		# "params: #{id}, #{@name}, #{location}, #{teastore}"
 		tea.update(tea_name: tea_name, type_of_tea: typeof, price: price)
 		redirect "/teaStores/tea/#{id}"
 		
