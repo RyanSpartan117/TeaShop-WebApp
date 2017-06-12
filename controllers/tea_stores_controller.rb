@@ -25,8 +25,9 @@ class TeaStoresController < Sinatra::Base
 		@name = params[:name]
 		address1 = params[:address1]
 		city = params[:city]
-		postcode = params[:location]
-	  	@teaStore = TeaStore.create!(name: @name, address1: address1, city: city, postcode: postcode)
+		postcode = params[:postcode]
+		rating = params[:rating]
+	  	@teaStore = TeaStore.create!(name: @name, rating: rating, address1: address1, city: city, postcode: postcode)
 	  	redirect("/teaStores/#{@teaStore.id}")
 	end
 
