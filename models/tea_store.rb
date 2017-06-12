@@ -7,4 +7,9 @@ class TeaStore < ActiveRecord::Base
 	geocoded_by :postcode
 	after_validation :geocode
 
+
+	# def self.index
+	# 	@q = TeaStore.ransack(params[:q])
+	# 	@teaStores = @q.result(distinct: true)
+	# end
 end
