@@ -3,6 +3,8 @@ require 'ransack'
 
 class TeaStore < ActiveRecord::Base 
 	extend Geocoder::Model::ActiveRecord
+	extend Ransack
+	
 	has_many :teas
 
 	geocoded_by :postcode
