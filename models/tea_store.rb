@@ -13,8 +13,4 @@ class TeaStore < ActiveRecord::Base
 		ransack.result.to_a
 	end
 
-	# def self.index
-	# 	@q = TeaStore.ransack(params[:q])
-	# 	@teaStores = @q.result(distinct: true)
-	# end
 end
