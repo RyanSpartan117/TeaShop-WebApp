@@ -41,14 +41,15 @@ class TeaStoresController < Sinatra::Base
 
 	#update
 	put '/teaStores/:id' do
-		id = params[:id]
+		id = params[:id].to_i
 		@name = params[:name]
 		address1 = params[:address1]
 		city = params[:city]
-		postcode = params[:location]
+		postcode = params[:postcode]
+		rating = params[:rating]
 		teaStore = TeaStore.find(id)
-	  	teaStore = TeaStore.create!(name: @name, address1: address1, city: city, postcode: postcode)
-		redirect "/teaStores/index"
+	  	teaStore = TeaStore.create!(name: @name, rating: rating, address1: address1, city: city, postcode: postcode)
+		redirect "/teaStores"
 		
 	end
 
@@ -63,7 +64,7 @@ class TeaStoresController < Sinatra::Base
 	delete "/teaStores/:id" do
 	  @teaStore = TeaStore.find(params[:id])
 	  @teaStore.destroy
-	  redirect("/teaStores/index")
+	  redirect("/teaStores")
 	end
 
 end

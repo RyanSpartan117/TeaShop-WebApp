@@ -4,6 +4,7 @@ function initMap() {
 	var longitude = parseFloat(document.getElementById("longitude").innerHTML);
 
 	var uluru = {lat: latitude, lng: longitude};
+
 	var map = new google.maps.Map(document.getElementById('map-location'), {
 	  zoom: 15,
 	  center: uluru
