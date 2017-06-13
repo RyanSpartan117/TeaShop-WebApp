@@ -53,7 +53,7 @@
 
 				<a href="/teaStores/tea/<%= tea.id %>/edit"><button class = "edit-button"> Edit</button> </a>
 
-					<form action = '<%= tea.id %>' method="post">
+					<form action = "/teaStores/tea/<%= tea.id%>" method="post">
 						<input type="hidden" name="_method" value="DELETE">
 
 						<input type="submit" value="Delete">
