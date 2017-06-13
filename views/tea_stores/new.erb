@@ -1,32 +1,25 @@
-<form action = '/teaStores' method = "POST">
-	<div>
-		<label for="name">Name</label>
-		<input type="text" name="name" >
-	</div>
-	<div>
-		<label for="address1">Address 1</label>
-		<textarea name="address1"></textarea>
+<form class="pure-form pure-form-aligned" action = '/teaStores' method = "POST">
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="name">Username</label>
+            <input id="name" type="text" name="name">
+        <div class="pure-control-group">
+            <label for="address1">Address 1</label>
+            <input id="password" type="text" name="address1">
+        </div>
 
-	</div>
-
-	<div>
-		<label for="city">City</label>
-		<input type="text" name="city">
-	</div>
-
-	<div>
-		<label for="Postcode">Postcode</label>
-		<input type="text" name="postcode"">
-	</div>
-
-	<div>
-		<label for="Rating">Rating</label>
-		<input type="text" name="rating"">
-	</div>
-
-	<div>
-		<input type="submit" value="Submit">
-
-	</div>
-
+        <div class="pure-control-group">
+            <label for="city">City</label>
+            <input id="email" type="text" name="city">
+        </div>
+         <div class="pure-control-group">
+            <label for="postcode">Postcode</label>
+            <input id="email" type="text" name="postcode">
+        </div>
+         <div class="pure-control-group">
+            <label for="rating"> Rating </label>
+            <input id="email" type="text" name="rating">
+    </fieldset>
+    <input  class="pure-controls" type="submit" value="Submit">
 </form>
+

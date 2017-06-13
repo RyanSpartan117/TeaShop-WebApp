@@ -42,7 +42,7 @@ a:hover {
 }
 
 .initial {
-
+	font-size: 45px;
 	text-align: center;
 }
 
@@ -50,7 +50,7 @@ a:hover {
 	margin:auto;
 	padding: 0;
     height: 75%;
-    width: 90%;
+    width: 100%;
     position: relative;
     left: 0;
     outline: none;
@@ -60,7 +60,7 @@ a:hover {
 
 #text-welcome {
 	height:100%;
-	width:85%;
+	width:100%;
 	margin:auto;
 
 }
@@ -163,3 +163,4 @@ a:hover {
 	text-align: center;
 	margin:0;
 }
+
