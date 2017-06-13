@@ -1,6 +1,6 @@
 body {
 
-	background-color: #ffff99;
+
 	color: #2C5530;
 }
 
@@ -23,7 +23,7 @@ html {
 .welcome-box {
 	height: 400px;
 	width: 500px;
-	margin-left: 20%;
+	margin:auto;
     text-align: center;
 
 }
@@ -36,9 +36,8 @@ html {
     position: relative;
     left: 0;
     outline: none;
-    border: 1px solid #cdcdcd;
+	background-color: #ffff99;
     border-color: rgba(0,0,0,.15);
-    background-color: #D38B5D;
     font-size: 20px;
 }
 
@@ -110,10 +109,18 @@ html {
 	vertical-align: 60%;
 }
 
+.caption-align-right a {
+	color: #000000;
+}
+
+.caption-align-right a:hover {
+	color: #000000;
+
+}
+
 .index-full-page {
 
 	width: 80%;
-	height: 100vh;
 	background-color: #FFFFFF;
 	text-align: center;
 	margin:auto;
@@ -133,13 +140,24 @@ html {
 	width: 32%;
 	display: inline-block;
 	background-color: #ffff99;
-	border: 1px solid #D38B5D;
+
 
 }
 
 .add-tea {
+
 	width:100%;
+	font-size: 35px;
 	text-align: center;
-	margin:auto;
+
+}
+
+.edit-button {
+	margin-bottom: 15px;
+}
+
+.teas-wrap {
+	text-align: center;
+	margin:0;
 
 }

@@ -29,11 +29,10 @@
 			<p id = "longitude"> <%= @teaStore.longitude %> </p>
 		</div>
 	</div>
-
-	<a href="<%= @teaStore.id %>/tea/new" class="add-tea" > Add a Tea! </a>
 </div>
 
 <section class="teas-wrap">
+	<a href="<%= @teaStore.id %>/tea/new" class="add-tea" > Add a Tea! </a>
 	<div class = "new-tea"></div>
 	<% @teas.each do |tea| %>
 	<div class="col-sm-6 col-md-4">
@@ -41,13 +40,18 @@
 			<img src=" http://i4.mirror.co.uk/incoming/article6201545.ece/ALTERNATES/s615/Cup-of-tea.jpg" alt="...">
 			<div class="caption">
 				<div class= "caption-align-left">
+					
 					<a href="/teaStores/tea/<%= tea.id %>"> 
 						<h3> <%= tea.tea_name %></h3>
 					</a>
 					<p> <%= tea.type_of_tea %> </p>
 					<p> £<%= tea.price %></p>
+
 				</div>
 				<div class= "caption-align-right">	
+
+				<a href="/teaStores/tea/<%= tea.id %>"><button class = "edit-button"> Edit</button> </a>
+
 					<form action = '<%= tea.id %>' method="post">
 						<input type="hidden" name="_method" value="DELETE">
 
