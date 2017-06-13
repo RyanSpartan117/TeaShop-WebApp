@@ -1,9 +1,10 @@
 html {
-	font-family: "Quicksand", "Bodoni MT", "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
-
+	font-family: 'Dosis', sans-serif;
 }
+
 body {
 
+	font-family: 'Dosis', sans-serif;
 
 	color: #2C5530;
 }
@@ -17,6 +18,10 @@ a {
 a:hover {
 	text-decoration: none;
 	color: #00b300;
+}
+
+.underline {
+	text-decoration: underline;
 }
 
 .welcome-box {
@@ -85,10 +90,6 @@ a:hover {
 	margin:auto;
 }
 
-#form-mid {
-	margin-left:200px;
-}
-
 .shop-container {
 	text-align:center;
 }
@@ -109,7 +110,6 @@ a:hover {
 	width:50%;
 	height: 100%;
 	display:inline-block;
-
 }
 
 .caption-align-right {
@@ -127,41 +127,32 @@ a:hover {
 
 .caption-align-right a:hover {
 	color: #000000;
-
 }
 
 .index-full-page {
-
 	width: 80%;
 	background-color: #FFFFFF;
 	text-align: center;
 	margin:auto;
-
 }
 
 #margin-bottom {
-
 	margin-bottom: 20px;
 }
 
 .shop-wrap {
-	
 	margin-top: 10px;
 	margin-left: 10px;
 	height: 200px;
 	width: 32%;
 	display: inline-block;
 	background-color: #ffff99;
-
-
 }
 
 .add-tea {
-
 	width:100%;
 	font-size: 35px;
 	text-align: center;
-
 }
 
 .edit-button {
@@ -171,5 +162,4 @@ a:hover {
 .teas-wrap {
 	text-align: center;
 	margin:0;
-
 }
