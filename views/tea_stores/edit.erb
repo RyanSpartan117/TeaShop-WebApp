@@ -1,33 +1,25 @@
-<form action = '/teaStores/<%=@teaStore.id%>' method = "POST">
+<form class="pure-form pure-form-aligned" action = '/teaStores/<%=@teaStore.id%>' method = "POST">
 	<input type="hidden" name="_method" value="PUT">
-	<div>
-		<label for="name">Name</label>
-		<input type="text" name="name" value = "<%= @teaStore.name %>">
-	</div>
-	<div>
-		<label for="address1">Address 1</label>
-		<textarea name="address1"><%= @teaStore.address1 %></textarea>
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="name">Username</label>
+            <input id="name" type="text" name="name" value = "<%= @teaStore.name %>">
+        <div class="pure-control-group">
+            <label for="address1">Address 1</label>
+			<textarea name="address1"><%= @teaStore.address1 %></textarea>
+        </div>
 
-	</div>
-
-	<div>
-		<label for="city">City</label>
-		<input type="text" name="city" value = "<%= @teaStore.city %>">
-	</div>
-
-	<div>
-		<label for="Postcode">Postcode</label>
-		<input type="text" name="postcode" value = "<%= @teaStore.postcode %>">
-	</div>
-
-		<div>
-		<label for="Rating">Rating</label>
-		<input type="text" name="rating" value = "<%= @teaStore.rating %>">
-	</div>
-
-	<div>
-		<input type="submit" value="Submit">
-
-	</div>
-
+        <div class="pure-control-group">
+            <label for="city">City</label>
+            <input id="email" type="text" name="city" value="<%= @teaStore.city %>">
+        </div>
+         <div class="pure-control-group">
+            <label for="postcode">Postcode</label>
+            <input id="email" type="text" name="postcode" value = "<%= @teaStore.postcode %>">
+        </div>
+         <div class="pure-control-group">
+            <label for="rating"> Rating </label>
+            <input id="email" type="text" name="rating" value = "<%= @teaStore.rating %>">
+    </fieldset>
+    <input  class="pure-controls" type="submit" value="Submit">
 </form>
