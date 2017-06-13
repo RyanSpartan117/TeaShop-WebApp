@@ -1,24 +1,16 @@
+<form class="pure-form pure-form-aligned" action = '/teaStores/<%= @id%>' method = "POST">
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="tea_name">Name of Tea</label>
+            <input id="name" type="text" name="tea_name">
+        <div class="pure-control-group">
+            <label for="type_of_tea">Type of Tea</label>
+            <input id="password" type="text" name="type_of_tea">
+        </div>
 
-
-<form action = '/teaStores/<%= @id%>' method = "post">
-	<div>
-		<label for="tea_name">Name</label>
-		<input type="text" name="tea_name">
-	</div>
-	<div>
-		<label for="type_of_tea">Type of Tea</label>
-		<input type="text" name="type_of_tea">
-
-	</div>
-	<div>
-		<label for="price">Price</label>
-		<input type="text" name="price">
-
-	</div>
-	<div>
-		<input type="submit" value="Submit">
-
-	</div>
-
+        <div class="pure-control-group">
+            <label for="price">Price</label>
+            <input id="price" type="text" name="price">
+    </fieldset>
+    <input  class="pure-controls" type="submit" value="Submit">
 </form>
-

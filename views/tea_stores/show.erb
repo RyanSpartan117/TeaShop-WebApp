@@ -41,7 +41,7 @@
 			<div class="caption">
 				<div class= "caption-align-left">
 					
-					<a href="/teaStores/tea/<%= tea.id %>"> 
+					<a href="/teaStores/tea/<%= tea.id %>/edit"> 
 						<h3> <%= tea.tea_name %></h3>
 					</a>
 					<p> <%= tea.type_of_tea %> </p>
@@ -50,7 +50,7 @@
 				</div>
 				<div class= "caption-align-right">	
 
-				<a href="/teaStores/tea/<%= tea.id %>"><button class = "edit-button"> Edit</button> </a>
+				<a href="/teaStores/tea/<%= tea.id %>/edit"><button class = "edit-button"> Edit</button> </a>
 
 					<form action = '<%= tea.id %>' method="post">
 						<input type="hidden" name="_method" value="DELETE">
