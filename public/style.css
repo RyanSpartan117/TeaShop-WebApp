@@ -107,11 +107,21 @@ html {
 
 }
 
+#margin-bottom {
+
+	margin-bottom: 20px;
+}
+
 .shop-wrap {
+
 	text-align: center;
 	margin:auto;
+	margin-top: 10px;
+	margin-left: 10px;
 	height: 200px;
 	width: 32%;
 	display: inline-block;
+	background-color: #ffff99;
+	border: 1px solid #D38B5D;
 
 }
