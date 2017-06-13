@@ -1,5 +1,43 @@
+body {
+
+	background-color: #ffff99;
+	color: #2C5530;
+	text-decoration: none;
+}
+
 html {
-	font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-family: "Bodoni MT", "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+
+}
+
+
+.welcome-box {
+	height: 400px;
+	width: 500px;
+	margin-left: 20%;
+    text-align: center;
+
+}
+
+.textbox {
+	margin:auto;
+	padding: 0;
+    height: 75%;
+    width: 90%;
+    position: relative;
+    left: 0;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.15);
+    background-color: #D38B5D;
+    font-size: 20px;
+}
+
+#text-welcome {
+	height:100%;
+	width:85%;
+	margin:auto;
+
 }
 
 .tea-store-name {
@@ -24,7 +62,6 @@ html {
 	margin:auto;
 }
 
-
 #form-mid {
 	margin-left:200px;
 }
@@ -37,7 +74,7 @@ html {
 	display:none;
 }
 
-#map-location {
+#map-location, #index-map {
 	height:400px;
 	width:50%;
 	border: black 2px solid;
@@ -51,6 +88,7 @@ html {
 	display:inline-block;
 
 }
+
 .caption-align-right {
 	width: 40%;
 	height: 100%;
@@ -58,4 +96,22 @@ html {
 	margin:auto;
 	margin-right: 0px;
 	vertical-align: 60%;
+}
+
+.index-full-page {
+
+	width: 80%;
+	height: 100vh;
+	background-color: #FFFFFF;
+	margin:auto;
+
+}
+
+.shop-wrap {
+	text-align: center;
+	margin:auto;
+	height: 200px;
+	width: 32%;
+	display: inline-block;
+
 }
