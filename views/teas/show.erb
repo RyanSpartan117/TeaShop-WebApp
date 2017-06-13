@@ -1,18 +1,11 @@
-<h1> <%=@tea.tea_name %> </h1>
-
-<div>
-	<p> <%= @tea.type_of_tea %></p>
-
-	<p>This tea costs £<%= @tea.price %> </p>
+<section class="center">
+	<h1> <%=@tea.tea_name %> has been editted!</h1>
 
 
-</div>
-<a href="<%= @tea.id %>/edit"> edit </a>
-<a href="../<%=@tea.tea_store_id%>"> back to store </a>
+	<h3> 
+		click<a href="../<%=@tea.tea_store_id%>"> <span class="underline">here</span> </a> to go back to the store 
+	</h3>
 
-<form action = '<%= @tea.id %>' method="post">
-	<input type="hidden" name="_method" value="DELETE">
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE-_zmOYlqUxWbDbvNMmXtxS_Cm3TYQookaWTDLoywYLeK3SgUpQ">
 
-	<input type="submit" value="Delete">
-
-</form>
+</section>
