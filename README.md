@@ -48,11 +48,15 @@ After that, go to your browser, and go to localhost:9393. Congratulations, your 
 ##Active Record
 
 Active Record is the Object Relational Mapping (ORM) for Postgres. It proves a layer on top to deal with the interactions between your application and the database. It requires a different approach to setting up the file structure.  
-Model-View-Controller (MVC) is still the required 
+Model-View-Controller (MVC) is still the go to architectural pattern to use, but needs to be set up slightly differently. There needs be a central file that 'requires' all the models and controllers together. In the application runner, we then use this file, a config file with the database credentials and used something called migrations to create a schema.  
 
-A real pain to setup without prior knowledge
-Gives you CRUD methods to use
-Generates your database using a schema made from migrations - no manual SQL needed
-Easy relationships between tables
-Some gems rely on Active Record
-Heroku setup made easy
+Migrations are Active Records way to make the database. By giving it a command, such as create_table or add_column followed by a set of parameters, you can set up a whole database without using any SQL.
+
+Although it's a bit troublesome to set up, it comes with many benefits:
+
+* It has it's own CRUD methods already, so you don't have to define your own. 
+* It generates the database for you, and allows you to edit it easily with simple commands.
+* Relationships between tables are very easy to setup.
+* Some Ruby gems rely on having Active Record installed. In this applications case- Geocoder.
+* Deploying it to Heroku, a web based cloud, was a lot easier.
+
