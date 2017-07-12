@@ -1,30 +1,6 @@
 require_relative '../models/tea.rb'
 require_relative '../models/tea_store.rb'
 
-# class TeaStores < ActiveRecord::Migration[5.1]
-#   def change
-#   	create_table :tea_stores do |t|
-#       t.string :name, null: false
-#       t.string :location, null: false
-#       t.decimal :rating, nul:false
-#   	end
-#   end
-# end
-
-# class Teas < ActiveRecord::Migration[5.1]
-#   def change
-#   	create_table :teas do |t|
-#   		t.string :tea_name, null:false
-#   		t.string :type, null:false
-#   		t.decimal :price, null:false, precision: 5, scale: 2
-#   		t.integer :tea_store_id
-
-#   	end
-#   end
-# end
-
-
-
 Tea.delete_all
 TeaStore.delete_all
 
