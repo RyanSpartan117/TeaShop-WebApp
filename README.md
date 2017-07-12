@@ -1,11 +1,11 @@
-#Tea Stores
-###Ryan Chapman
+# Tea Stores
+### Ryan Chapman
 
-##What is Tea Stores  
+## What is Tea Stores  
 Tea Stores is a handy site for helping you manage the location of tea stores, and what they sell. The site will give generate a google map location for you according to the postcode you've given it. It is a fully CRUD website.
 
 
-##Adding your own local version
+## Adding your own local version
 
 With SSH:
 
